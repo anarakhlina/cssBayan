@@ -1,0 +1,27 @@
+.center {
+    position: relative;
+    margin: auto;
+    width: 80%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.image-container, img {
+    opacity: 0;
+    height: 0rem;
+}
+
+
+input[type=radio] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input[type=radio]:checked ~ .image-container, .image-container > img {
+    opacity: 1;
+    height: 25rem;
+}
