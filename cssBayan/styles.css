@@ -9,19 +9,34 @@ ul {
     padding-left: 0px;
 }
 
+li {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .image-container, img {
     opacity: 0;
     height: 0rem;
 }
 
-
 input[type=radio] {
-    width: 0;
-    height: 0;
-    visibility: hidden;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    cursor: pointer;
+    opacity: 0;
 }
 
 input[type=radio]:checked ~ .image-container, .image-container > img {
+    opacity: 1;
+    height: 25rem;
+}
+
+.list-item:hover .image-container, .image-container > img {
     opacity: 1;
     height: 25rem;
 }
